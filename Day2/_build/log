@@ -1,0 +1,25 @@
+# dune exec Day2
+# OCAMLPARAM: unset
+# Shared cache: disabled
+# Shared cache location: /home/michal/.cache/dune/db
+# Workspace root: /home/michal/Study/AoC/AoC2024/Day2
+# Auto-detected concurrency: 16
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dev
+#  ; merlin = true
+#  ; fdo_target_exe = None
+#  ; build_dir = In_build_dir "default"
+#  ; instrument_with = []
+#  }
+$ /home/michal/.opam/default/bin/ocamlc.opt -config > /tmp/dune_53aaa8_output
+$ (cd _build/default && /home/michal/.opam/default/bin/ocamldep.opt -modules -impl lib/manager.ml) > _build/default/lib/.Day2.objs/day2__Manager.impl.d
+$ (cd _build/default && /home/michal/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I lib/.Day2.objs/byte -no-alias-deps -opaque -open Day2 -o lib/.Day2.objs/byte/day2__Manager.cmo -c -impl lib/manager.ml)
+$ (cd _build/default && /home/michal/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I lib/.Day2.objs/byte -no-alias-deps -opaque -open Day2 -o lib/.Day2.objs/byte/day2__Parser.cmo -c -impl lib/parser.ml)
+$ (cd _build/default && /home/michal/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I bin/.main.eobjs/byte -I lib/.Day2.objs/byte -no-alias-deps -opaque -o bin/.main.eobjs/byte/dune__exe__Main.cmi -c -intf bin/main.mli)
+$ (cd _build/default && /home/michal/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I lib/.Day2.objs/byte -I lib/.Day2.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Day2 -o lib/.Day2.objs/native/day2__Manager.cmx -c -impl lib/manager.ml)
+$ (cd _build/default && /home/michal/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I lib/.Day2.objs/byte -I lib/.Day2.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Day2 -o lib/.Day2.objs/native/day2__Parser.cmx -c -impl lib/parser.ml)
+$ (cd _build/default && /home/michal/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I bin/.main.eobjs/byte -I bin/.main.eobjs/native -I lib/.Day2.objs/byte -I lib/.Day2.objs/native -intf-suffix .ml -no-alias-deps -opaque -o bin/.main.eobjs/native/dune__exe__Main.cmx -c -impl bin/main.ml)
+$ (cd _build/default && /home/michal/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -a -o lib/Day2.cmxa lib/.Day2.objs/native/day2.cmx lib/.Day2.objs/native/day2__Printer.cmx lib/.Day2.objs/native/day2__Manager.cmx lib/.Day2.objs/native/day2__Parser.cmx)
+$ (cd _build/default && /home/michal/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o bin/main.exe lib/Day2.cmxa bin/.main.eobjs/native/dune__exe__Main.cmx)
